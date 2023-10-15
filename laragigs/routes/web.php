@@ -27,10 +27,12 @@ Route::get('/posts/{id}', function ($id) {
 */
 
 // Routes with id restriction
+/*
 Route::get('/posts/{id}', function ($id) {
     return response(['Post' => $id])
         ->header('Content-Type', 'application/json');
 })->where('id', '\d+');
+*/
 
 Route::get('/search', function (Request $request) {
     return $request->name . ' ' . $request->country;
