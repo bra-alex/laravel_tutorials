@@ -10,7 +10,7 @@
             @method('PUT')
             <div class="mb-6">
                 <label for="company" class="inline-block text-lg mb-2" >Company Name</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company" value={{$listing->company}} />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="company" value="{{$listing->company}}" />
                 @error('company')
                     <p class="text-red-500 text-ms mt-1">{{$message}}</p>
                 @enderror
@@ -18,7 +18,7 @@
 
             <div class="mb-6">
                 <label for="title" class="inline-block text-lg mb-2">Job Title</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title" placeholder="Example: Senior Laravel Developer" value={{$listing->title}} />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="title" placeholder="Example: Senior Laravel Developer" value="{{$listing->title}}" />
                 @error('title')
                     <p class="text-red-500 text-ms mt-1">{{$message}}</p>
                 @enderror
@@ -26,7 +26,7 @@
 
             <div class="mb-6">
                 <label for="location" class="inline-block text-lg mb-2" >Job Location</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="location" placeholder="Example: Remote, Boston MA, etc" value={{$listing->location}} />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="location" placeholder="Example: Remote, Boston MA, etc" value="{{$listing->location}}" />
                 @error('location')
                     <p class="text-red-500 text-ms mt-1">{{$message}}</p>
                 @enderror
@@ -34,7 +34,7 @@
 
             <div class="mb-6">
                 <label for="email" class="inline-block text-lg mb-2">Contact Email</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="email" value={{$listing->email}} />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="email" value="{{$listing->email}}" />
                 @error('email')
                     <p class="text-red-500 text-ms mt-1">{{$message}}</p>
                 @enderror
@@ -42,7 +42,7 @@
 
             <div class="mb-6">
                 <label for="website" class="inline-block text-lg mb-2"> Website/Application URL </label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="website" value={{$listing->website}} />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="website" value="{{$listing->website}}" />
                 @error('website')
                     <p class="text-red-500 text-ms mt-1">{{$message}}</p>
                 @enderror
@@ -50,7 +50,7 @@
 
             <div class="mb-6">
                 <label for="tags" class="inline-block text-lg mb-2">Tags (Comma Separated)</label>
-                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" value={{$listing->tags}} />
+                <input type="text" class="border border-gray-200 rounded p-2 w-full" name="tags" placeholder="Example: Laravel, Backend, Postgres, etc" value="{{$listing->tags}}" />
                 @error('tags')
                     <p class="text-red-500 text-ms mt-1">{{$message}}</p>
                 @enderror
@@ -77,7 +77,7 @@
             <div class="mb-6">
                 <button class="bg-laravel text-white rounded py-2 px-4 hover:bg-black text-lg"> Update Gig </button>
 
-                <a href="dashboard.html" class="text-black ml-4">Back</a>
+                <a href="/listings/{{$listing->id}}" class="text-black ml-4">Back</a>
             </div>
         </form>
     </x-card>

@@ -19,6 +19,7 @@ use Illuminate\Support\Facades\Route;
 // Listing
 Route::get('/', [ListingController::class, 'index']);
 Route::post('/listings', [ListingController::class, 'store'])->middleware('auth');
+Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth');
 Route::get('/listings/create', [ListingController::class, 'create'])->middleware('auth');
 Route::put('/listings/{listing}', [ListingController::class, 'update'])->middleware('auth');
 Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
@@ -29,9 +30,9 @@ Route::get('/listings/{listing}', [ListingController::class, 'show']);
 // User
 Route::post('/users', [UserController::class, 'store'])->middleware('guest');
 Route::post('/login', [UserController::class, 'login'])->middleware('guest');
-Route::get('/login', [UserController::class, 'getLogin'])->name('login')->middleware('guest');
 Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 Route::get('/register', [UserController::class, 'create'])->middleware('guest');
+Route::get('/login', [UserController::class, 'getLogin'])->name('login')->middleware('guest');
 
 
 
